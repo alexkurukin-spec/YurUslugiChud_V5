@@ -1,0 +1,1631 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Отмена судебного приказа за 10 дней — Я Помогаю</title>
+<meta name="description" content="Отменим судебный приказ за 10 дней без вашего участия в суде. Работаем по всей России. Оплата по факту, за результат. Юридическая помощь должникам и взыскателям.">
+<meta name="theme-color" content="#1c3a36">
+<link rel="canonical" href="https://я-помогаю.рф/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Отмена судебного приказа за 10 дней — Я Помогаю">
+<meta property="og:description" content="Без вашего участия в суде. По всей России. Оплата только за результат.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:url" content="https://я-помогаю.рф/">
+
+<!-- Шрифт: Manrope покрывает кириллицу, имеет сильный контраст веса -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   ТОКЕНЫ
+   ============================================================ */
+:root {
+  /* Цветовая стратегия: committed.
+     Тёплый кремовый paper-фон + глубокий тил-зелёный + коралл-акцент.
+     Цвета в OKLCH (с фолбэком в HEX для Safari < 15.4 не нужен — поддержка норм). */
+  --bg:           oklch(0.984 0.006 90);
+  --bg-soft:      oklch(0.962 0.010 88);
+  --bg-deep:      oklch(0.198 0.022 175);    /* для финального CTA-блока */
+
+  --ink:          oklch(0.20 0.014 230);
+  --ink-muted:    oklch(0.46 0.012 230);
+  --ink-subtle:   oklch(0.62 0.010 230);
+  --on-deep:      oklch(0.96 0.012 90);
+
+  --primary:      oklch(0.34 0.060 175);
+  --primary-mid:  oklch(0.50 0.080 175);
+  --primary-soft: oklch(0.92 0.025 175);
+  --primary-line: oklch(0.78 0.030 175);
+
+  --accent:       oklch(0.66 0.165 42);
+  --accent-deep:  oklch(0.57 0.180 38);
+  --accent-soft:  oklch(0.94 0.040 60);
+
+  --border:       oklch(0.88 0.012 88);
+  --border-strong:oklch(0.74 0.014 88);
+
+  --success:      oklch(0.55 0.130 152);
+
+  /* Радиусы — небольшие, без округлой «милости». */
+  --r-xs: 4px;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+
+  /* Тени тонкие, тинтованные. */
+  --shadow-1: 0 1px 2px oklch(0.20 0.02 175 / 0.04), 0 1px 1px oklch(0.20 0.02 175 / 0.05);
+  --shadow-2: 0 4px 12px oklch(0.20 0.02 175 / 0.06), 0 2px 4px oklch(0.20 0.02 175 / 0.04);
+  --shadow-3: 0 16px 40px oklch(0.20 0.02 175 / 0.10), 0 4px 12px oklch(0.20 0.02 175 / 0.06);
+
+  /* Тайминги. Ease-out экспоненциально. */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-strong: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Сетка */
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --max-w: 1240px;
+}
+
+/* ============================================================
+   БАЗА
+   ============================================================ */
+*,*::before,*::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+  font-weight: 400;
+  font-feature-settings: "ss01", "cv11";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img,svg { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; border: 0; background: none; color: inherit; }
+input, textarea, select { font: inherit; color: inherit; }
+::selection { background: var(--primary); color: var(--on-deep); }
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Утилиты типографики */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-mid);
+}
+.lede {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.5;
+  color: var(--ink-muted);
+  max-width: 60ch;
+}
+
+/* ============================================================
+   КНОПКИ
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  padding: 0.9rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+  border-radius: var(--r-sm);
+  transition: transform .25s var(--ease-out), background .2s var(--ease-out), color .2s var(--ease-out), box-shadow .25s var(--ease-out);
+  white-space: nowrap;
+  text-align: center;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary {
+  background: var(--accent);
+  color: oklch(0.16 0.02 40);
+  box-shadow: 0 1px 0 oklch(0.16 0.02 40 / 0.15) inset, var(--shadow-2);
+}
+.btn-primary:hover { background: var(--accent-deep); color: var(--on-deep); }
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border-strong);
+}
+.btn-ghost:hover { background: var(--bg-soft); border-color: var(--ink-muted); }
+.btn-tg, .btn-wa {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  color: var(--ink);
+}
+.btn-tg:hover { border-color: #2AABEE; color: #2AABEE; }
+.btn-wa:hover { border-color: #25D366; color: #25D366; }
+.btn-lg { padding: 1.05rem 1.75rem; font-size: 1.05rem; }
+
+/* ============================================================
+   ШАПКА
+   ============================================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in oklab, var(--bg) 92%, transparent);
+  backdrop-filter: saturate(150%) blur(8px);
+  -webkit-backdrop-filter: saturate(150%) blur(8px);
+  border-bottom: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+}
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.95rem;
+}
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.brand__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; height: 32px;
+  background: var(--primary);
+  color: var(--on-deep);
+  border-radius: var(--r-xs);
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0;
+  align-self: center;
+}
+.brand__sub {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: var(--ink-subtle);
+}
+.nav { display: none; gap: 1.5rem; align-items: center; }
+.nav a { color: var(--ink-muted); font-size: 0.9375rem; font-weight: 500; transition: color .15s; }
+.nav a:hover { color: var(--ink); }
+.header-cta { display: flex; align-items: center; gap: 0.5rem; }
+.header-phone { display: none; font-weight: 700; font-size: 0.95rem; letter-spacing: -0.01em; }
+
+@media (min-width: 900px) {
+  .nav { display: flex; }
+  .header-phone { display: inline-flex; align-items: center; gap: 0.5rem; }
+  .header-phone::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--success);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px color-mix(in oklab, var(--success) 25%, transparent);
+  }
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  padding-block: clamp(3rem, 7vw, 6rem) clamp(3.5rem, 8vw, 7rem);
+  overflow: hidden;
+}
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: end;
+}
+@media (min-width: 1000px) {
+  .hero__inner { grid-template-columns: 1.4fr 1fr; gap: 4rem; }
+}
+.hero__title {
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  margin: 0 0 1.5rem;
+  color: var(--ink);
+}
+.hero__title em {
+  font-style: normal;
+  color: var(--primary);
+  display: inline-block;
+  position: relative;
+}
+.hero__title em::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 0.07em;
+  height: 0.18em;
+  background: var(--accent-soft);
+  z-index: -1;
+  border-radius: 2px;
+}
+.hero__lede {
+  font-size: clamp(1.05rem, 1.7vw, 1.3rem);
+  line-height: 1.5;
+  color: var(--ink-muted);
+  max-width: 36ch;
+  margin: 0 0 2rem;
+}
+.hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2.25rem;
+}
+.hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  max-width: 560px;
+}
+.hero__trust > div { display: flex; align-items: baseline; gap: 0.5rem; }
+.hero__trust strong {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.hero__trust span { font-size: 0.8125rem; line-height: 1.3; }
+
+/* Визуальная карточка приказа */
+.order-card {
+  position: relative;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 1.75rem;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  box-shadow: var(--shadow-2);
+  max-width: 440px;
+  justify-self: end;
+  width: 100%;
+  transform: rotate(0.3deg);
+  transition: transform .6s var(--ease-out-strong);
+}
+.order-card:hover { transform: rotate(0); }
+.order-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px dashed var(--border-strong);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-subtle);
+  font-weight: 600;
+}
+.order-card__title {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+.order-card__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  font-size: 0.8125rem;
+}
+.order-card__row + .order-card__row { border-top: 1px solid color-mix(in oklab, var(--border) 60%, transparent); }
+.order-card__row b { color: var(--ink); font-weight: 600; }
+.order-card__strike {
+  text-decoration: line-through;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  color: var(--ink-subtle);
+}
+.stamp {
+  position: absolute;
+  top: 1.25rem;
+  right: -0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: 3px solid var(--accent);
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.125rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  transform: rotate(-8deg);
+  border-radius: var(--r-xs);
+  background: color-mix(in oklab, var(--bg) 70%, transparent);
+  box-shadow: 0 0 0 1px var(--accent) inset;
+  font-family: 'Manrope', sans-serif;
+  opacity: 0;
+  animation: stampIn 1.4s var(--ease-out-strong) 0.6s forwards;
+}
+@keyframes stampIn {
+  0%   { opacity: 0; transform: rotate(-25deg) scale(2); }
+  60%  { opacity: 1; transform: rotate(-5deg) scale(0.95); }
+  100% { opacity: 1; transform: rotate(-8deg) scale(1); }
+}
+
+/* Маркизой регионы */
+.regions-strip {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-block: 1.25rem;
+  border-block: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+.regions-strip__track {
+  display: flex;
+  gap: 2.25rem;
+  white-space: nowrap;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+  letter-spacing: -0.005em;
+  width: max-content;
+  animation: marquee 60s linear infinite;
+}
+.regions-strip__track span { display: inline-flex; align-items: center; gap: 0.5rem; }
+.regions-strip__track span::before {
+  content: '';
+  width: 4px; height: 4px;
+  background: var(--primary-mid);
+  border-radius: 50%;
+}
+@keyframes marquee {
+  to { transform: translate3d(-50%, 0, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .regions-strip__track { animation: none; }
+  .stamp { animation: none; opacity: 1; }
+}
+
+/* ============================================================
+   СЕКЦИИ — общая раскладка
+   ============================================================ */
+section { padding-block: clamp(4rem, 8vw, 7rem); }
+.section-head {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 3rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+@media (min-width: 900px) {
+  .section-head { grid-template-columns: 1fr 1.4fr; align-items: end; }
+}
+.section-head h2 {
+  font-size: clamp(1.85rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  margin: 0.5rem 0 0;
+  color: var(--ink);
+}
+.section-head p {
+  font-size: 1.0625rem;
+  color: var(--ink-muted);
+  line-height: 1.55;
+  margin: 0;
+  max-width: 56ch;
+}
+
+/* ============================================================
+   PAIN — «вы здесь, потому что»
+   ============================================================ */
+.pain { background: var(--bg-soft); }
+.pain-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+@media (min-width: 720px) { .pain-list { grid-template-columns: 1fr 1fr; } }
+.pain-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: baseline;
+}
+@media (min-width: 720px) {
+  .pain-item:nth-child(odd)  { padding-right: 2rem; border-right: 1px solid var(--border); }
+  .pain-item:nth-child(even) { padding-left: 2rem; }
+}
+.pain-item__num {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--ink-subtle);
+  flex-shrink: 0;
+  letter-spacing: 0.05em;
+  font-variant-numeric: tabular-nums;
+  min-width: 2.5ch;
+}
+.pain-item__text {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.4;
+  color: var(--ink);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.pain-item__text em {
+  font-style: italic;
+  color: var(--ink-muted);
+  font-weight: 400;
+}
+
+/* ============================================================
+   PROCESS — что мы делаем
+   ============================================================ */
+.process-steps {
+  display: grid;
+  gap: 0;
+}
+.step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border);
+  align-items: start;
+}
+@media (min-width: 720px) {
+  .step { grid-template-columns: 100px 1fr 1fr; gap: 3rem; }
+}
+.step:last-child { border-bottom: 1px solid var(--border); }
+.step__num {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 200;
+  line-height: 0.9;
+  color: var(--primary);
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+.step__title {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+}
+.step__body {
+  font-size: 1rem;
+  color: var(--ink-muted);
+  line-height: 1.55;
+  max-width: 50ch;
+  grid-column: 2;
+}
+@media (min-width: 720px) {
+  .step__body { grid-column: 3; grid-row: 1; }
+  .step__title { grid-column: 2; }
+}
+
+/* ============================================================
+   PRICING — цены
+   ============================================================ */
+.pricing { background: var(--bg-soft); }
+.tiers {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 800px)  { .tiers { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) { .tiers { grid-template-columns: 1fr 1.15fr 1fr; align-items: stretch; } }
+.tier {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.75rem 1.75rem 1.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  transition: transform .3s var(--ease-out), box-shadow .3s var(--ease-out), border-color .2s;
+}
+.tier:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); border-color: var(--border-strong); }
+.tier--featured {
+  background: var(--primary);
+  color: var(--on-deep);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-3);
+  position: relative;
+}
+.tier--featured:hover { transform: translateY(-2px); box-shadow: var(--shadow-3); }
+.tier--featured .tier__name { color: var(--on-deep); }
+.tier--featured .tier__price { color: var(--on-deep); }
+.tier--featured .tier__desc { color: oklch(0.85 0.02 175); }
+.tier--featured .tier__list li { color: oklch(0.92 0.01 175); border-color: oklch(0.92 0.01 175 / 0.15); }
+.tier--featured .tier__list li::before { background: var(--accent); }
+.tier--featured .tier__cta { background: var(--accent); color: oklch(0.16 0.02 40); }
+.tier--featured .tier__cta:hover { background: oklch(0.74 0.17 50); }
+.tier__badge {
+  position: absolute;
+  top: -0.7rem; left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: oklch(0.16 0.02 40);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 100px;
+}
+.tier__name {
+  font-size: 0.8125rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--primary-mid);
+}
+.tier__title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  margin: 0;
+}
+.tier--featured .tier__title { color: var(--on-deep); }
+.tier__price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.tier__price small {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+  letter-spacing: 0;
+}
+.tier--featured .tier__price small { color: oklch(0.85 0.02 175); }
+.tier__desc {
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+.tier__list {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+.tier__list li {
+  position: relative;
+  padding: 0.75rem 0 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  color: var(--ink);
+  line-height: 1.4;
+  border-top: 1px solid var(--border);
+}
+.tier__list li:first-child { border-top: 0; }
+.tier__list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 1.05rem;
+  width: 8px; height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+}
+.tier__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.25rem;
+  background: var(--ink);
+  color: var(--on-deep);
+  font-weight: 600;
+  border-radius: var(--r-sm);
+  font-size: 0.9375rem;
+  margin-top: auto;
+  transition: background .2s, color .2s;
+}
+.tier__cta:hover { background: var(--primary); }
+
+.pricing-extra {
+  margin-top: 2rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--bg);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--r-md);
+  display: grid;
+  gap: 0.5rem 2rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .pricing-extra { grid-template-columns: 1fr auto; align-items: center; }
+}
+.pricing-extra__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+.pricing-extra__title {
+  font-weight: 700;
+  font-size: 1.0625rem;
+  margin-block: 0.25rem;
+  letter-spacing: -0.01em;
+}
+.pricing-extra__desc { font-size: 0.9375rem; color: var(--ink-muted); margin: 0; }
+.pricing-extra__price {
+  font-size: 1.625rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+
+/* ============================================================
+   REQUIRED — что нам нужно от вас
+   ============================================================ */
+.required {
+  background: var(--bg);
+}
+.required-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: var(--bg-soft);
+}
+@media (min-width: 720px) { .required-grid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px){ .required-grid { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+.required-item {
+  padding: 1.75rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--bg-soft);
+  transition: background .2s;
+}
+.required-item:hover { background: var(--bg); }
+@media (min-width: 720px) {
+  .required-item:nth-child(odd) { border-right: 1px solid var(--border); }
+  .required-item:nth-child(n+3) { border-bottom: 0; }
+}
+@media (min-width: 1000px) {
+  .required-item { border-right: 1px solid var(--border); }
+  .required-item:last-child { border-right: 0; }
+  .required-item:nth-child(2) { border-right: 1px solid var(--border); }
+  .required-item:nth-child(3) { border-bottom: 0; }
+  .required-item:nth-child(4) { border-bottom: 0; border-right: 0; }
+  .required-item:nth-child(1), .required-item:nth-child(2), .required-item:nth-child(3) { border-bottom: 0; }
+}
+.required-item__num {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--primary-mid);
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+}
+.required-item__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0;
+  color: var(--ink);
+}
+.required-item__desc { font-size: 0.9375rem; color: var(--ink-muted); margin: 0; line-height: 1.5; }
+
+/* ============================================================
+   STATS
+   ============================================================ */
+.stats { background: var(--bg-deep); color: var(--on-deep); }
+.stats h2 { color: var(--on-deep); }
+.stats .section-head p { color: oklch(0.78 0.02 175); }
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid oklch(1 0 0 / 0.12);
+}
+@media (min-width: 800px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
+.stat {
+  padding: 2rem 1.25rem 2rem 0;
+  border-bottom: 1px solid oklch(1 0 0 / 0.12);
+}
+@media (min-width: 800px) {
+  .stat { border-bottom: 0; }
+  .stat + .stat { padding-left: 1.5rem; border-left: 1px solid oklch(1 0 0 / 0.12); }
+}
+.stat__value {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--on-deep);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 0.5rem;
+}
+.stat__value sup {
+  font-size: 0.5em;
+  font-weight: 600;
+  vertical-align: super;
+  color: var(--accent);
+}
+.stat__label {
+  font-size: 0.9375rem;
+  color: oklch(0.78 0.02 175);
+  line-height: 1.4;
+  max-width: 22ch;
+}
+.stats-note {
+  margin-top: 2.5rem;
+  font-size: 0.8125rem;
+  color: oklch(0.65 0.02 175);
+  letter-spacing: 0.02em;
+}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-list {
+  border-top: 1px solid var(--border);
+}
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.5rem 3.5rem 1.5rem 0;
+  font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  color: var(--ink);
+  position: relative;
+  transition: color .15s;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--primary); }
+.faq-item summary::after {
+  content: '';
+  position: absolute;
+  right: 0.5rem; top: 50%;
+  width: 20px; height: 20px;
+  transform: translateY(-50%);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%231c3a36' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M5 8l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: transform .35s var(--ease-out-strong);
+}
+.faq-item[open] summary::after { transform: translateY(-50%) rotate(180deg); }
+.faq-item__body {
+  padding: 0 0 1.75rem;
+  color: var(--ink-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 70ch;
+}
+.faq-item__body p { margin: 0 0 0.75rem; }
+.faq-item__body p:last-child { margin-bottom: 0; }
+.faq-item__body strong { color: var(--ink); font-weight: 600; }
+
+/* ============================================================
+   FINAL CTA / FORM
+   ============================================================ */
+.cta {
+  background: var(--primary);
+  color: var(--on-deep);
+  position: relative;
+  overflow: hidden;
+}
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(ellipse at 80% 20%, oklch(0.55 0.10 165 / 0.5), transparent 60%);
+  pointer-events: none;
+}
+.cta__inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+}
+@media (min-width: 1000px) { .cta__inner { grid-template-columns: 1.1fr 1fr; align-items: center; } }
+.cta h2 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin: 0 0 1.25rem;
+  color: var(--on-deep);
+  max-width: 16ch;
+}
+.cta__lede {
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: oklch(0.85 0.02 175);
+  max-width: 44ch;
+  margin: 0 0 2rem;
+}
+.cta__channels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+@media (min-width: 600px) { .cta__channels { flex-direction: row; flex-wrap: wrap; } }
+.channel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.1rem;
+  background: oklch(1 0 0 / 0.05);
+  border: 1px solid oklch(1 0 0 / 0.12);
+  color: var(--on-deep);
+  border-radius: var(--r-sm);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: background .2s, border-color .2s, transform .2s;
+}
+.channel:hover { background: oklch(1 0 0 / 0.10); border-color: oklch(1 0 0 / 0.25); transform: translateY(-1px); }
+.channel svg { flex-shrink: 0; }
+
+.form {
+  background: var(--bg);
+  color: var(--ink);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  border-radius: var(--r-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow-3);
+}
+.form h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--ink);
+}
+.form p { font-size: 0.9375rem; color: var(--ink-muted); margin: -0.5rem 0 0.5rem; }
+.field { display: flex; flex-direction: column; gap: 0.4rem; }
+.field label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--ink-muted);
+  letter-spacing: 0.02em;
+}
+.field input, .field textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  font-size: 1rem;
+  transition: border-color .15s, background .15s, box-shadow .15s;
+}
+.field input:focus, .field textarea:focus {
+  outline: 0;
+  border-color: var(--primary);
+  background: var(--bg);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 18%, transparent);
+}
+.field textarea { resize: vertical; min-height: 96px; }
+.form button[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.25rem;
+  background: var(--accent);
+  color: oklch(0.16 0.02 40);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: var(--r-sm);
+  transition: background .2s, transform .2s;
+}
+.form button[type="submit"]:hover { background: var(--accent-deep); color: var(--on-deep); }
+.form button[type="submit"]:active { transform: translateY(1px); }
+.form__legal {
+  font-size: 0.75rem;
+  color: var(--ink-subtle);
+  line-height: 1.4;
+  margin: 0;
+}
+.form__legal a { color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
+
+.form__success {
+  text-align: center;
+  padding: 2rem 0;
+  display: none;
+}
+.form__success.is-visible { display: block; }
+.form__success-icon {
+  width: 56px; height: 56px;
+  background: color-mix(in oklab, var(--success) 12%, transparent);
+  color: var(--success);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.form__success h3 { margin: 0 0 0.5rem; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.site-footer {
+  padding-block: 3rem 2rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem 3rem;
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 800px) { .site-footer__grid { grid-template-columns: 1.4fr 1fr 1fr; } }
+.site-footer__col h4 {
+  font-size: 0.8125rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  font-weight: 700;
+}
+.site-footer__col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.site-footer__col a { color: var(--ink-muted); transition: color .15s; }
+.site-footer__col a:hover { color: var(--primary); }
+.site-footer__legal {
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem 2rem;
+  font-size: 0.75rem;
+  color: var(--ink-subtle);
+  line-height: 1.6;
+}
+@media (min-width: 800px) { .site-footer__legal { grid-template-columns: 1fr auto; align-items: end; } }
+
+/* ============================================================
+   ANIMATIONS — fade in on scroll
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .8s var(--ease-out), transform .8s var(--ease-out);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ======================================================
+     ШАПКА
+     ====================================================== -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="#top" class="brand" aria-label="Я-Помогаю.Рф — на главную">
+      <span class="brand__mark">Я</span>
+      <span>Помогаю.<span class="brand__sub">Рф</span></span>
+    </a>
+    <nav class="nav" aria-label="Главное меню">
+      <a href="#process">Как мы работаем</a>
+      <a href="#pricing">Цены</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+74950000000" class="header-phone" aria-label="Позвонить">+7&nbsp;(495)&nbsp;000-00-00</a>
+      <a href="#contact" class="btn btn-primary">Бесплатная&nbsp;проверка</a>
+    </div>
+  </div>
+</header>
+
+<!-- ======================================================
+     HERO
+     ====================================================== -->
+<main id="top">
+
+<section class="hero">
+  <div class="container hero__inner">
+    <div>
+      <span class="eyebrow">Юридический центр · работаем с 2014 г.</span>
+      <h1 class="hero__title">
+        Отменим судебный приказ <em>за 10 дней</em>. Без вашего участия в суде.
+      </h1>
+      <p class="hero__lede">
+        По всей России. Готовим возражения в день обращения, отправляем в суд сами, ведём дело до результата. Оплата — по факту, за положительное решение.
+      </p>
+      <div class="hero__ctas">
+        <a href="#contact" class="btn btn-primary btn-lg">Проверить мой приказ&nbsp;→</a>
+        <a href="https://t.me/yapomogayu" class="btn btn-tg btn-lg" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+          Написать в Telegram
+        </a>
+      </div>
+
+      <div class="hero__trust">
+        <div><strong>10</strong><span>дней — стандартный<br>срок отмены</span></div>
+        <div><strong>100+</strong><span>отменённых приказов<br>за полугодие</span></div>
+        <div><strong>0&nbsp;₽</strong><span>при отрицательном<br>результате</span></div>
+      </div>
+    </div>
+
+    <!-- Визуальный объект: «приказ ОТМЕНЁН» -->
+    <aside class="order-card" aria-hidden="true">
+      <div class="order-card__head">
+        <span>Судебный приказ</span>
+        <span>№ 2-1847/25</span>
+      </div>
+      <div class="order-card__title">О взыскании задолженности</div>
+      <div class="order-card__row">
+        <span>Должник</span><b>Иванов И. И.</b>
+      </div>
+      <div class="order-card__row">
+        <span>Взыскатель</span><b>ООО «МКК»</b>
+      </div>
+      <div class="order-card__row">
+        <span>Сумма</span><b class="order-card__strike">187&nbsp;420&nbsp;₽</b>
+      </div>
+      <div class="order-card__row">
+        <span>Госпошлина</span><b class="order-card__strike">2&nbsp;448&nbsp;₽</b>
+      </div>
+      <div class="order-card__row">
+        <span>Срок исполнения</span><b class="order-card__strike">14 дней</b>
+      </div>
+      <div class="stamp">Отменён</div>
+    </aside>
+  </div>
+
+  <!-- Ленточка регионов -->
+  <div class="container">
+    <div class="regions-strip" aria-label="Регионы, в которых мы работаем">
+      <div class="regions-strip__track">
+        <span>Москва</span><span>Санкт-Петербург</span><span>Екатеринбург</span>
+        <span>Новосибирск</span><span>Казань</span><span>Краснодар</span>
+        <span>Нижний Новгород</span><span>Самара</span><span>Челябинск</span>
+        <span>Уфа</span><span>Ростов-на-Дону</span><span>Воронеж</span>
+        <span>Пермь</span><span>Волгоград</span><span>Красноярск</span>
+        <span>Тюмень</span><span>Тольятти</span><span>Ижевск</span>
+        <span>Барнаул</span><span>Иркутск</span><span>Хабаровск</span>
+        <span>Владивосток</span><span>Ярославль</span><span>Махачкала</span>
+        <!-- дубль для бесконечной маркизы -->
+        <span>Москва</span><span>Санкт-Петербург</span><span>Екатеринбург</span>
+        <span>Новосибирск</span><span>Казань</span><span>Краснодар</span>
+        <span>Нижний Новгород</span><span>Самара</span><span>Челябинск</span>
+        <span>Уфа</span><span>Ростов-на-Дону</span><span>Воронеж</span>
+        <span>Пермь</span><span>Волгоград</span><span>Красноярск</span>
+        <span>Тюмень</span><span>Тольятти</span><span>Ижевск</span>
+        <span>Барнаул</span><span>Иркутск</span><span>Хабаровск</span>
+        <span>Владивосток</span><span>Ярославль</span><span>Махачкала</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     PAIN — почему вы здесь
+     ====================================================== -->
+<section class="pain">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Если вы здесь</span>
+        <h2>Скорее всего, что-то из этого случилось с вами</h2>
+      </div>
+      <p>
+        Судебный приказ — особый документ: его выносят без вашего вызова в суд. Чаще всего о нём узнают, когда деньги уже списаны или приставы заблокировали счёт. Но 10 дней с момента получения — ваше окно для защиты.
+      </p>
+    </div>
+
+    <ol class="pain-list reveal">
+      <li class="pain-item"><span class="pain-item__num">01</span><span class="pain-item__text">С карты вдруг <em>списали деньги</em>, и вы не понимаете, на каком основании.</span></li>
+      <li class="pain-item"><span class="pain-item__num">02</span><span class="pain-item__text">На Госуслугах появилось <em>исполнительное производство</em>, о котором вы не знали.</span></li>
+      <li class="pain-item"><span class="pain-item__num">03</span><span class="pain-item__text">Пришло письмо из суда или <em>от приставов</em> по старому, давно забытому долгу.</span></li>
+      <li class="pain-item"><span class="pain-item__num">04</span><span class="pain-item__text">Сумма требований <em>сильно завышена</em>: проценты и штрафы за годы.</span></li>
+      <li class="pain-item"><span class="pain-item__num">05</span><span class="pain-item__text">Микрозайм или кредит, по которым <em>истёк срок исковой давности</em>.</span></li>
+      <li class="pain-item"><span class="pain-item__num">06</span><span class="pain-item__text">Налоговая или ЖКХ-задолженность, которую <em>вы уже погасили</em>.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================================================
+     PROCESS — что мы делаем
+     ====================================================== -->
+<section id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Что мы делаем</span>
+        <h2>Пять шагов — и приказ отменён</h2>
+      </div>
+      <p>
+        Вы не ходите в суд, не пишете возражения, не звоните приставам. Всю процедуру ведём мы. От вас — копия приказа и пять минут на разговор с юристом.
+      </p>
+    </div>
+
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step__num">01</div>
+        <h3 class="step__title">Изучаем приказ в день обращения</h3>
+        <p class="step__body">Анализируем основания, проверяем срок давности, оцениваем шансы на отмену и возврат списанных средств. Если приказа на руках нет — найдём сами в системе ГАС «Правосудие».</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__num">02</div>
+        <h3 class="step__title">Готовим возражения и заявление</h3>
+        <p class="step__body">Составляем юридически выверенное заявление об отмене. Если 10-дневный срок пропущен — одновременно готовим ходатайство о его восстановлении с обоснованием уважительной причины.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__num">03</div>
+        <h3 class="step__title">Отправляем документы в суд</h3>
+        <p class="step__body">Сами направляем пакет в мировой суд по подсудности — заказным письмом с описью или через ГАС «Правосудие». Вы получаете трек-номер и копию заявления.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__num">04</div>
+        <h3 class="step__title">Ведём дело до отмены</h3>
+        <p class="step__body">Контролируем движение заявления, отвечаем на запросы суда, при необходимости подаём частную жалобу. Вы получаете определение об отмене в электронном виде.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step__num">05</div>
+        <h3 class="step__title">Возвращаем списанные средства</h3>
+        <p class="step__body">Если деньги уже сняли — оформляем поворот исполнения судебного приказа. Подаём заявление, контролируем работу пристава, добиваемся возврата на ваш счёт.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     PRICING — цены
+     ====================================================== -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Цены</span>
+        <h2>Фиксированная стоимость, без скрытых доплат</h2>
+      </div>
+      <p>
+        Цена зависит только от того, успеваете ли вы в 10-дневный срок и ушёл ли приказ к приставам. Никаких процентов от суммы долга и абонентских платежей. Оплата — по факту положительного результата.
+      </p>
+    </div>
+
+    <div class="tiers">
+      <article class="tier reveal">
+        <span class="tier__name">Документ</span>
+        <h3 class="tier__title">Только заявление</h3>
+        <div class="tier__price">от&nbsp;2&nbsp;000&nbsp;<small>₽</small></div>
+        <p class="tier__desc">Если хотите подать сами. Готовим возражения и пошаговую инструкцию.</p>
+        <ul class="tier__list">
+          <li>Юридическая проверка приказа</li>
+          <li>Заявление об отмене на ваше имя</li>
+          <li>Инструкция по подаче в ваш суд</li>
+          <li>Оплата сразу после составления</li>
+        </ul>
+        <a href="#contact" class="tier__cta">Заказать заявление</a>
+      </article>
+
+      <article class="tier tier--featured reveal">
+        <span class="tier__badge">Чаще всего</span>
+        <span class="tier__name">Под ключ</span>
+        <h3 class="tier__title">Полное ведение дела</h3>
+        <div class="tier__price">от&nbsp;3&nbsp;300&nbsp;<small>₽</small></div>
+        <p class="tier__desc">Если 10 дней с момента получения ещё не прошли. Мы делаем всё.</p>
+        <ul class="tier__list">
+          <li>Составление и отправка в суд</li>
+          <li>Контроль движения дела</li>
+          <li>Получение определения суда</li>
+          <li>Без вашего участия в заседаниях</li>
+          <li>Оплата по факту отмены приказа</li>
+        </ul>
+        <a href="#contact" class="tier__cta">Запустить отмену</a>
+      </article>
+
+      <article class="tier reveal">
+        <span class="tier__name">Сложный случай</span>
+        <h3 class="tier__title">Срок пропущен или приставы уже работают</h3>
+        <div class="tier__price">от&nbsp;5&nbsp;300&nbsp;<small>₽</small></div>
+        <p class="tier__desc">Если 10 дней истекли или приказ уже в исполнительном производстве.</p>
+        <ul class="tier__list">
+          <li>Восстановление пропущенного срока</li>
+          <li>Полное ведение дела до отмены</li>
+          <li>Уведомление приставов и приостановка</li>
+          <li>Оплата по факту результата</li>
+        </ul>
+        <a href="#contact" class="tier__cta">Разобрать ситуацию</a>
+      </article>
+    </div>
+
+    <div class="pricing-extra reveal">
+      <div>
+        <span class="pricing-extra__label">Доп. услуга</span>
+        <h4 class="pricing-extra__title">Возврат уже списанных приставами средств</h4>
+        <p class="pricing-extra__desc">Поворот исполнения судебного приказа. Платите процент только от фактически вернувшейся суммы — не от ожидаемой.</p>
+      </div>
+      <div class="pricing-extra__price">5%<small style="font-size:.75em;font-weight:500;color:var(--ink-muted);">&nbsp;от возврата, мин. 3&nbsp;300&nbsp;₽</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     REQUIRED — что нам нужно от вас
+     ====================================================== -->
+<section class="required">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">От вас потребуется</span>
+        <h2>Четыре вещи. Всё остальное — на нас</h2>
+      </div>
+      <p>
+        Никаких поездок в суд, к нам в офис или к нотариусу. Достаточно одного звонка или сообщения в мессенджер.
+      </p>
+    </div>
+
+    <div class="required-grid reveal">
+      <div class="required-item">
+        <span class="required-item__num">— 01</span>
+        <h3 class="required-item__title">Копия приказа</h3>
+        <p class="required-item__desc">Сфотографируйте и пришлите в Telegram или WhatsApp. Если приказа нет — найдём за вас по ФИО и году рождения.</p>
+      </div>
+      <div class="required-item">
+        <span class="required-item__num">— 02</span>
+        <h3 class="required-item__title">Дата получения</h3>
+        <p class="required-item__desc">Когда вы узнали о приказе: на почте, в банке, на Госуслугах или от приставов. От этого зависит срок и тариф.</p>
+      </div>
+      <div class="required-item">
+        <span class="required-item__num">— 03</span>
+        <h3 class="required-item__title">Ваш регион</h3>
+        <p class="required-item__desc">Подсудность определяется по адресу регистрации должника. Назовёте при разговоре с юристом — пара секунд.</p>
+      </div>
+      <div class="required-item">
+        <span class="required-item__num">— 04</span>
+        <h3 class="required-item__title">Статус у приставов</h3>
+        <p class="required-item__desc">Возбуждено ли исполнительное производство и были ли списания. Если не знаете — проверим за вас по базе ФССП.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     STATS
+     ====================================================== -->
+<section class="stats">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow" style="color:var(--accent)">Опыт в цифрах</span>
+        <h2>Что мы сделали в первом полугодии 2025</h2>
+      </div>
+      <p>Мы практикуем отмену судебных приказов системно: от микрозаймов и налогов до коммунальных платежей и алиментов. Каждое дело ведёт юрист с профильным опытом не менее 10 лет.</p>
+    </div>
+
+    <div class="stats-grid reveal">
+      <div class="stat">
+        <div class="stat__value">108<sup>+</sup></div>
+        <p class="stat__label">отменённых судебных приказов</p>
+      </div>
+      <div class="stat">
+        <div class="stat__value">27<small style="font-size:.5em;font-weight:600;letter-spacing:0;">&nbsp;млн&nbsp;₽</small></div>
+        <p class="stat__label">общая сумма обжалованных требований</p>
+      </div>
+      <div class="stat">
+        <div class="stat__value">70<sup>+</sup></div>
+        <p class="stat__label">случаев возврата средств в порядке поворота</p>
+      </div>
+      <div class="stat">
+        <div class="stat__value">32</div>
+        <p class="stat__label">успешных обжалования действий приставов</p>
+      </div>
+    </div>
+    <p class="stats-note">* Данные внутренней статистики юридического центра «Я Помогаю» за период январь — июнь 2025 г.</p>
+  </div>
+</section>
+
+<!-- ======================================================
+     FAQ
+     ====================================================== -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Частые вопросы</span>
+        <h2>Коротко о том, что вас беспокоит</h2>
+      </div>
+      <p>Если вашего вопроса здесь нет — напишите в Telegram или WhatsApp, юрист ответит лично, без чат-ботов и отдела продаж.</p>
+    </div>
+
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>Сколько времени занимает отмена приказа?</summary>
+        <div class="faq-item__body">
+          <p>Заявление готовим в день обращения и в этот же день отправляем в суд. <strong>По закону мировой судья обязан отменить приказ при поступлении возражений — на это ему даётся не более трёх рабочих дней.</strong> На практике с учётом почтовой пересылки и регистрации документов отмена занимает 7–14 дней.</p>
+          <p>Если срок пропущен и нужно ходатайствовать о его восстановлении — добавьте 2–3 недели на рассмотрение этого ходатайства.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Что делать, если 10 дней уже прошли?</summary>
+        <div class="faq-item__body">
+          <p>10-дневный срок отсчитывается не с даты вынесения приказа, а с момента, когда вы его <strong>фактически получили</strong>. Если письмо лежало на почте, а вы его не забрали — срок исчисляется иначе, и его реально восстановить.</p>
+          <p>Мы готовим ходатайство о восстановлении срока с обоснованием уважительной причины (не уведомлены, отсутствовали, болели, сменили адрес). В большинстве случаев суды восстанавливают срок без проблем.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>А если приказ уже у приставов и деньги списали?</summary>
+        <div class="faq-item__body">
+          <p>Это типичная ситуация — почти половина обращений к нам именно такие. Действуем в два этапа:</p>
+          <p><strong>1.</strong> Восстанавливаем срок и добиваемся отмены приказа. <strong>2.</strong> На основании определения об отмене подаём заявление о повороте исполнения — деньги возвращают на ваш счёт.</p>
+          <p>Если деньги ещё не успели перечислить взыскателю и они на депозите ФССП — возвращаются быстрее. Если уже ушли кредитору — взыскание идёт уже с него.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Нужно ли мне приходить в суд?</summary>
+        <div class="faq-item__body">
+          <p><strong>Нет.</strong> Судебный приказ выносится без вызова сторон, и его отмена тоже происходит без заседания. Судья просто рассматривает поступившие возражения и выносит определение об отмене.</p>
+          <p>Если ваше дело перейдёт в исковое производство (после отмены приказа взыскатель может подать обычный иск) — мы сообщим заранее и обсудим дальнейшую защиту отдельно.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Что значит «оплата по факту»?</summary>
+        <div class="faq-item__body">
+          <p>Вы платите тогда, когда получаете на руки определение суда об отмене приказа. До этого момента — никаких списаний, авансов и абонентской платы.</p>
+          <p>Исключение — тариф «Только заявление»: там оплата сразу после составления, потому что подаёте вы сами и контроль исполнения уже не на нас.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>В каких регионах вы работаете?</summary>
+        <div class="faq-item__body">
+          <p>По всей территории России. Заявление об отмене подаётся в тот мировой суд, который вынес приказ — мы направляем документы заказным письмом или через ГАС «Правосудие» в любой регион. Личное присутствие юриста в суде вашего города не требуется.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Как я пойму, что вам можно доверять?</summary>
+        <div class="faq-item__body">
+          <p>Самый честный ответ: на этапе бесплатной консультации. Юрист посмотрит ваш приказ и скажет напрямую — есть основания для отмены или нет. Если шансов нет, мы не возьмёмся за дело и предложим другие варианты (например, реструктуризацию или рассрочку).</p>
+          <p>Договор подписываем только после согласования стратегии. Все определения суда вы получаете в оригинале или в виде заверенной электронной копии — это официальный документ, который ничем нельзя подделать.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Можно ли просто проконсультироваться, без услуги?</summary>
+        <div class="faq-item__body">
+          <p>Да. Первая консультация по приказу — бесплатная. Юрист посмотрит документ и расскажет, что делать. Если вы решите справиться сами — расскажем как, без давления и без скрытых платежей.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================
+     FINAL CTA
+     ====================================================== -->
+<section class="cta" id="contact">
+  <div class="container cta__inner">
+    <div class="reveal">
+      <h2>Покажите приказ — скажем, можно ли его отменить</h2>
+      <p class="cta__lede">Отправьте фотографию или скан в Telegram, WhatsApp или через форму справа. Юрист ответит в течение 15 минут в рабочее время и сразу скажет: есть основания для отмены, какой тариф подходит и сколько займёт. Без воронок продаж.</p>
+
+      <div class="cta__channels">
+        <a href="https://t.me/yapomogayu" class="channel" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+          Telegram
+        </a>
+        <a href="https://wa.me/74950000000" class="channel" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0012.05 4a7.94 7.94 0 00-6.88 11.9L4 20l4.21-1.1a7.93 7.93 0 003.79.97h.01a7.94 7.94 0 005.6-13.55zm-5.55 12.2h-.01a6.6 6.6 0 01-3.36-.92l-.24-.14-2.5.65.67-2.43-.16-.25a6.6 6.6 0 1112.23-3.5 6.6 6.6 0 01-6.63 6.59zm3.62-4.94c-.2-.1-1.18-.58-1.36-.65-.18-.07-.31-.1-.45.1-.13.2-.51.65-.62.78-.12.13-.23.15-.43.05a5.4 5.4 0 01-2.7-2.36c-.2-.35.2-.32.58-1.07.06-.13.03-.25-.02-.35l-.62-1.49c-.16-.39-.33-.34-.45-.34h-.39a.74.74 0 00-.54.25 2.25 2.25 0 00-.7 1.67c0 .99.72 1.94.82 2.07.1.13 1.42 2.17 3.45 3.05.48.21.86.33 1.16.42.49.16.93.13 1.28.08.39-.06 1.18-.48 1.35-.95.17-.46.17-.86.12-.95-.05-.1-.18-.15-.38-.24z"/></svg>
+          WhatsApp
+        </a>
+        <a href="tel:+74950000000" class="channel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          +7 (495) 000-00-00
+        </a>
+      </div>
+
+      <p style="margin-top: 1.75rem; font-size: 0.875rem; color: oklch(0.78 0.02 175);">
+        Работаем без выходных: <strong style="color:var(--on-deep)">пн–вс, 9:00–21:00 МСК</strong>
+      </p>
+    </div>
+
+    <form class="form reveal" id="leadForm" novalidate>
+      <h3>Бесплатная проверка приказа</h3>
+      <p>Заполните форму — юрист свяжется с вами в течение 15 минут.</p>
+
+      <div class="field">
+        <label for="name">Как к вам обращаться</label>
+        <input type="text" id="name" name="name" autocomplete="given-name" placeholder="Анна">
+      </div>
+
+      <div class="field">
+        <label for="phone">Телефон <span style="color:var(--accent-deep)">*</span></label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+      </div>
+
+      <div class="field">
+        <label for="situation">Кратко о ситуации (необязательно)</label>
+        <textarea id="situation" name="situation" placeholder="Например: списали 47 000 ₽ с зарплатной карты, на Госуслугах увидел приказ от 2023 года"></textarea>
+      </div>
+
+      <button type="submit">Получить ответ юриста&nbsp;→</button>
+
+      <p class="form__legal">
+        Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>. Мы не передаём ваши данные третьим лицам и не используем для рассылок.
+      </p>
+
+      <div class="form__success" id="formSuccess" role="status" aria-live="polite">
+        <div class="form__success-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Заявка принята</h3>
+        <p>Юрист свяжется с вами в течение 15 минут. Приготовьте копию приказа — это ускорит разговор.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================================================
+     ФУТЕР
+     ====================================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div class="site-footer__col">
+        <a href="#top" class="brand" style="margin-bottom: 1rem;">
+          <span class="brand__mark">Я</span>
+          <span>Помогаю.<span class="brand__sub">Рф</span></span>
+        </a>
+        <p style="margin: 0; max-width: 36ch; line-height: 1.55;">
+          Юридический центр. Отмена судебных приказов, банкротство физлиц, защита прав потребителей. Работаем по всей России с 2014 года.
+        </p>
+      </div>
+
+      <div class="site-footer__col">
+        <h4>Услуги</h4>
+        <ul>
+          <li><a href="#">Отмена судебного приказа</a></li>
+          <li><a href="#">Банкротство физических лиц</a></li>
+          <li><a href="#">Возврат списанных средств</a></li>
+          <li><a href="#">Защита прав потребителей</a></li>
+          <li><a href="#">Все услуги</a></li>
+        </ul>
+      </div>
+
+      <div class="site-footer__col">
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href="tel:+74950000000"><strong style="color:var(--ink)">+7 (495) 000-00-00</strong></a></li>
+          <li><a href="https://t.me/yapomogayu">Telegram</a></li>
+          <li><a href="https://wa.me/74950000000">WhatsApp</a></li>
+          <li>пн–вс, 9:00–21:00 МСК</li>
+          <li>Москва, ул. ____________</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__legal">
+      <div>
+        © 2025 Я-Помогаю.Рф &nbsp;·&nbsp; ИП ____________ &nbsp;·&nbsp; ИНН ____________ &nbsp;·&nbsp; ОГРН ____________
+        <br>
+        <a href="#" style="color:var(--ink-muted); text-decoration: underline; text-underline-offset: 2px;">Политика конфиденциальности</a> &nbsp;·&nbsp;
+        <a href="#" style="color:var(--ink-muted); text-decoration: underline; text-underline-offset: 2px;">Согласие на обработку ПДн</a>
+      </div>
+      <div style="opacity:.7;">
+        Информация на сайте не является публичной офертой
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ======================================================
+     SCRIPTS
+     ====================================================== -->
+<script>
+  // Маска телефона + базовая валидация
+  (function(){
+    var phone = document.getElementById('phone');
+    if (phone) {
+      phone.addEventListener('input', function(e){
+        var v = e.target.value.replace(/\D/g, '').slice(0, 11);
+        if (v.length === 0) { e.target.value = ''; return; }
+        if (v[0] === '8') v = '7' + v.slice(1);
+        if (v[0] !== '7') v = '7' + v;
+        var out = '+7';
+        if (v.length > 1) out += ' (' + v.slice(1, 4);
+        if (v.length >= 5) out += ') ' + v.slice(4, 7);
+        if (v.length >= 8) out += '-' + v.slice(7, 9);
+        if (v.length >= 10) out += '-' + v.slice(9, 11);
+        e.target.value = out;
+      });
+    }
+  })();
+
+  // Сабмит формы (заглушка — отправлять нужно на ваш бэкенд / CRM / Telegram-бот)
+  (function(){
+    var form = document.getElementById('leadForm');
+    var success = document.getElementById('formSuccess');
+    if (!form) return;
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var phone = document.getElementById('phone');
+      if (!phone.value || phone.value.replace(/\D/g, '').length < 11) {
+        phone.focus();
+        phone.style.borderColor = 'var(--accent-deep)';
+        return;
+      }
+      // ─── СЮДА ВСТАВЬТЕ РЕАЛЬНУЮ ОТПРАВКУ ─────────────────
+      // Например, fetch('/api/lead', {method:'POST', body: new FormData(form)})
+      // или интеграцию с Bitrix24, amoCRM, Telegram-ботом.
+      // ─────────────────────────────────────────────────────
+      Array.from(form.children).forEach(function(c){
+        if (c.id !== 'formSuccess') c.style.display = 'none';
+      });
+      success.classList.add('is-visible');
+    });
+  })();
+
+  // Reveal-анимация при скролле
+  (function(){
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) {
+          en.target.classList.add('is-visible');
+          io.unobserve(en.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+    document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
